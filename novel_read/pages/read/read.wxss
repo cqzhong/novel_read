@@ -1,0 +1,83 @@
+/* pages/read/read.wxss */
+/* 
+ * https://cqz-1256838880.cos.ap-shanghai.myqcloud.com/fz-mw-sf.ttf 
+ * https://cqz-1256838880.cos.ap-shanghai.myqcloud.com/SIL-Kai-Reg-Jian.ttf
+ */
+@import '/style/iconfont.wxss';
+
+@font-face {
+  font-family: "fz-mw-sf";
+  src: url("https://cqz-1256838880.cos.ap-shanghai.myqcloud.com/SIL-Kai-Reg-Jian.ttf");
+}
+
+page{
+  width: 100%;
+  height: 100%;
+}
+.read_bgcover {
+  position: relative;
+  overflow: hidden;
+}
+
+.read_bg {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.read_bg .header{
+  height: 52rpx;
+  margin: 0 40rpx;
+  line-height: 52rpx;
+  font-size: 28rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: blue; */
+}
+.read_bg .header text{
+  color:#634102;
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  /* background-color: red; */
+}
+.read_bg .read_body {
+  font-family: "fz-mw-sf";
+  display: block;
+  overflow-x: hidden;
+  height: 100%; 
+  box-sizing: border-box;
+  /* -moz-column-rule:1px solid #a3cfff; */
+  /* column-rule:1px solid #a3cfff; */
+  column-gap: 60rpx;
+  -webkit-column-gap:60rpx;
+  padding: 0 18rpx 0 42rpx;
+  position: relative;
+}
+
+.read_footer {
+  width: 100%;
+  padding: 10rpx;
+  position: fixed;
+  background: #000;
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 100rpx;
+  justify-content: space-around;
+  bottom: 0;
+}
+
+.read_footer .btn {
+  width: 20%;
+  font-size: 12px;
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+  color: #fff;
+}

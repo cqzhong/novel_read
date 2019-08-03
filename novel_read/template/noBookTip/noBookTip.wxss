@@ -1,0 +1,20 @@
+
+.noBook_bottom {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom_image {
+  background-repeat: no-repeat;
+  width: 291rpx;
+  height: 200rpx;
+}
+
+.bottom_tip {
+  font-size: 26rpx;
+  color: #999999;
+}

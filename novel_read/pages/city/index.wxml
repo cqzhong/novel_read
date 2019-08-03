@@ -1,0 +1,2 @@
+<!--pages/city/index.wxml-->
+ <city-choose have-history="{{false}}" catch:confirm="confirm" />

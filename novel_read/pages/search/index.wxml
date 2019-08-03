@@ -1,0 +1,39 @@
+<!--pages/search/index.wxml-->
+<view class="search" style="background-color: #FFFFFF;">
+  <view class="search_Top">
+    <view class="search-operate">
+      <text class="iconfont iconsearch_top"></text>
+      <input value='{{inputVal}}' bindinput="bindKeyInput" class="{{inputVal.length > 0 ? 'active' : ''}}" 
+        placeholder="请输入书名、作者或者分类" confirm-type="search" bindconfirm="search" />
+    </view>
+  </view>
+
+  
+ <!--section-->
+ <block wx:if="{{isSearch}}">
+  <view class='section' style="width:100%;padding-top:110rpx;">
+    <view class='box'>
+      <bookList list="{{list}}" 
+      isLoadmore="{{isLoadmore}}" 
+      bindloadMore="getListData" 
+      bindviewBookDetail="viewBookDetail" 
+      showLoad="{{showLoad}}">
+      </bookList>
+    </view>
+  </view>
+ </block>
+ <block wx:else>
+   <view class="hot_recommend">
+     <view class="search-keyword-title">热门推荐</view>
+     <view wx:for="{{hotWordArray}}" 
+     wx:key="index"
+     class="search-keyword-item" 
+     bindtap="clickHotwords" 
+     data-obj="{{item}}">
+     
+       <text class="iconfont iconsearch_icon_book__ {{index%2==0 ? 'left' : ''}}"> {{item}}</text>
+     </view>
+   </view>
+ </block>
+  
+</view>

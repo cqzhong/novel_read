@@ -1,0 +1,6 @@
+<template name="noBookTip">
+  <view class="noBook_bottom" bindtap="{{fn}}">
+    <image class='bottom_image' mode='aspectFit' src="../../images/home_noBook.png"></image>
+    <text class="bottom_tip">暂无书籍</text>
+  </view>
+</template>

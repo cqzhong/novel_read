@@ -1,0 +1,56 @@
+.base_cell_view {
+  background-color: #fff;
+  width: 100%;
+  height: 140rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.cover_image {
+  width: 100rpx;
+  height: 100rpx;
+  margin-left: 30rpx;
+}
+
+.right_view {
+  margin-left: 20rpx;
+  height: 100%;
+  width: 570rpx;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+.right_view view {
+  width: 100%;
+  white-space: nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.title_label {
+  color: #38312B;
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
+}
+.chapter_num_label {
+  color: #A39D96;
+  font-size: 22rpx;
+}
+
+.bg_bottom_view:after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    border-bottom: 1px solid #E5E5E5;
+    color: #E5E5E5;
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    -webkit-transform: scaleY(0.8);
+    transform: scaleY(0.8);
+}

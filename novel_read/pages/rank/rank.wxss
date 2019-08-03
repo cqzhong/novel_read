@@ -1,0 +1,41 @@
+/* pages/rank/rank.wxss */
+.rank_classTitle {
+  margin: 30rpx;
+  border-left: 10rpx solid #FD674F;
+  font-size: 30rpx;
+  padding: 0 20rpx;
+}
+.rankList_Item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100rpx;
+  position: relative;
+}
+.rankList_Item .rank_cover {
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 30rpx;
+  background-color: #fff;
+}
+.rankList_Item .rank_name {
+  color: #38312B;
+  font-size: 32rpx;
+  margin-left: 20rpx;
+}
+.rankList_Item:after {
+  content: " ";
+  position: absolute;
+  left: 30rpx;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  border-bottom: 1px solid #E5E5E5;
+  color: #E5E5E5;
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}

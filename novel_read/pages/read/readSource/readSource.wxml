@@ -1,0 +1,23 @@
+<!--pages/read/readSource/readSource.wxml-->
+<view class="source_bottom">
+  <block wx:for="{{sources}}" wx:key="idx" wx:for-index="idx" wx:for-item="obj">
+   
+    <view class="item_bottom" bindtap="selectBookSource" data-obj="{{obj}}">
+      <!-- 左边 -->
+      <view class="item_left">{{idx}}</view>
+
+      <!-- 中间 -->
+      <view class="item_center">
+        <view class="item_center_top">
+          <text class="top_link">{{obj.source}}</text>
+          <text class="top_time">{{obj.updateTime}}</text>
+        </view>
+        <view class="item_center_bottom">{{obj.lastChapter}}</view>
+      </view>
+
+  <!-- 右边 -->
+      <view class="item_right">{{idx == currentIndex ? "当前选择" : ""}}</view>
+    </view>
+
+  </block>
+</view>

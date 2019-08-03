@@ -1,0 +1,57 @@
+<!--pages/search/search.wxml-->
+
+<view class="page__bd">
+   <view class='weui-search-bar'>
+      <view class='weui-search-bar__form'>
+         <view class='weui-search-bar__box'>
+             <icon class='weui-icon-search_in-box' type='search' size='14'></icon>
+             <input type='text' class='weui-search-bar__input' 
+             placeholder-class="inputPlace_holder" 
+             placeholder='请输入书名、作者或者分类' value='{{inputVal}}' focus="{{inputShowed}}" 
+             bindinput="inputTyping" confirm-type="search"
+             bindconfirm="clickSearchEvent"/>
+
+             <!---- hidden='{{inputVal.length === 0}}'---->
+             <view class="weui-icon-clear" bindtap="clearInput" wx:if="{{inputVal.length > 0}}">
+             <icon type="clear" size="14"></icon>
+             </view>
+
+         </view>
+         <!--遮盖-->
+         <label class='weui-search-bar__label' hidden='{{inputShowed}}' bindtap="showInput">
+             <icon class='weui-icon-search' type='search' size='14'></icon>
+             <view class="weui-search-bar__text" style="color:#C0C0C8;">请输入书名、作者或者分类</view>
+         </label>
+      </view>
+
+      <!--取消按钮-->
+      <view class='weui-search-bar__cancel-btn' style="color:#666; font-size:30rpx; " hidden='{{!inputShowed}}' bindtap='hideInput'>取消</view>
+   </view>
+</view>
+
+<!--热搜-->
+<view class='search-keyword'>
+   <view class="search-keyword-title">热门搜索</view>
+   <view 
+   wx:for="{{hotWordArray}}" 
+   wx:key="index" 
+   wx:for-item="obj" 
+   class="search-keyword-item" 
+   bindtap="clickHotwords" 
+   data-keyword="{{obj}}" 
+   style="background-color:{{randomColorArray[index]}}">{{obj}}
+   </view>
+</view>
+
+<!--section-->
+  <view class='section'>
+    <view class='box'>
+      <bookList list="{{list}}" 
+      isLoadmore="{{isLoadmore}}" 
+      bindloadMore="getListData" 
+      bindviewBookDetail="viewBookDetail" 
+      showLoad="{{showLoad}}">
+      </bookList>
+    </view>
+  </view>w>
+

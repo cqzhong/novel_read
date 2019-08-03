@@ -1,0 +1,50 @@
+/* pages/search/search.wxss */
+
+.header {
+  width: 99%;
+  height: 30px;
+  line-height: 30px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid gray;
+  border-radius: 4px;
+}
+.search-input {
+  display: block;
+  width: 70%;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 10px;
+}
+.inputPlace_holder {
+  color: #C0C0C8;
+}
+.search-btn {
+  display: block;
+  width: 30%;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+}
+
+.search-keyword {
+  padding: 30rpx;
+}
+.search-keyword-title {
+  padding-left: 20rpx;
+  margin-top: 40rpx;
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
+  border-left: 10rpx solid #000;
+}
+
+.search-keyword-item {
+  display: inline-block;
+  padding: 5rpx 20rpx;
+  border-radius: 34rpx;
+  margin: 0 10rpx 10rpx 0;
+  color: #fff;
+  font-size: 24rpx; 
+}

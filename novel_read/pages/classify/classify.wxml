@@ -1,0 +1,14 @@
+<!--pages/classify/classify.wxml-->
+
+<view class="classify_bottom">
+  <block wx:for="{{objAttribute}}" wx:key="idx" wx:for-index="idx" wx:for-item="obj">
+    <text class="title">{{obj}}</text>
+    <view class='classify_item'>
+      <view class='collection_item' wx:for="{{classifyObj[idx]}}" wx:key="index" bindtap="checkClassifyList" data-major="{{item.name}}" data-gender="{{idx}}">
+        <view class="collection_itemName">{{item.name}}</view>
+        <view class="collection_itemCount">{{item.bookCount}}</view>
+      </view>
+    </view>
+    
+  </block>
+</view>

@@ -1,0 +1,12 @@
+<!--pages/rank/rankList/rankList.wxml-->
+<view class='section'>
+  <view class='box'>
+    <bookList
+      list="{{list}}"
+      isLoadmore="{{isLoadmore}}"
+      bindloadMore="loadRankListRequest"
+      bindviewBookDetail="viewBookDetail"
+      showLoad="{{showLoad}}"
+    ></bookList>
+  </view>
+</view>

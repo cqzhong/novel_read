@@ -1,0 +1,4 @@
+<!--components/btn/btn.wxml-->
+<view class='outbtn'>
+  <view class='loadmore' bindtap='loadMore'>加载更多</view>
+</view>

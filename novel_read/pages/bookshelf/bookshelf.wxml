@@ -1,0 +1,33 @@
+<!--pages/bookshelf/bookshelf.wxml-->
+<import src="../../template/noBookTip/noBookTip.wxml"/>
+
+<view class="shelf_bottom">
+  <block wx:if="{{bookList.length == 0}}">
+    <view class='shelf_bottom'>
+      <template is="noBookTip" data="{{fn : fn}}"></template>
+    </view>
+  </block>
+  <block wx:else>
+
+    <view class="shelf_bottom">
+      <block wx:for="{{bookList}}" wx:key="idx" wx:for-index="idx" wx:for-item="obj">
+        <view class='book_bottom'  data-index='{{idx}}' bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd">
+
+           <view class="book_item" bindlongtap="checkBookDetail" bindtap="toRead" data-obj="{{obj}}" data-index='{{idx}}' style="right:{{obj.right}}rpx">
+             <image class='cover_image' mode='aspectFit' src="https://statics.zhuishushenqi.com{{obj.cover}}"></image>
+             <view class="book_itemRightView">
+               <text class='title_label'>{{obj.title}}</text>
+               <text class='book_author'>最近更新：{{obj.updateTime}}</text>
+               <text class='book_author'>{{obj.lastChapter}}</text>
+             </view>
+           </view>
+         <!-- 删除view -->
+           <view class="remove" bindtap="delItem" data-index="{{idx}}" style="z-index: {{obj.z_index}};">删除 </view>
+
+ 
+        </view>
+      </block>
+    </view>
+
+  </block>
+</view>

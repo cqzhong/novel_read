@@ -1,0 +1,42 @@
+<!--pages/read/read.wxml--> 
+
+<image class='read_bgcover' mode='aspectFill' src="../../images/sheepskin_mode_bg.png" style="position: fixed;width:100%;height:100%;z-index: -1;" bindtap="showFooter"></image>
+
+<view class="read_bg">
+  
+  <view class="header" style="height:{{style.lineHeight + 'rpx'}};line-height:{{style.lineHeight + 'rpx'}};">
+    <text>{{bookContentsObj.chapters[linkNum].title}}</text>
+    <text>{{pageindex}}/{{pageNum}}</text>
+  </view>
+
+  <view class="read_body" 
+  style="color:{{style.color}};font-size:{{style.fontSize + 'rpx'}};line-height:{{style.lineHeight + 'rpx'}};width: {{pageNum*100+'%'}};-webkit-column-count: {{pageNum}}; column-count: {{pageNum}};left: {{leftValue+'px'}};" bindtouchstart="handleTouchStart" bindtouchmove="handleTouchMove" bindtouchend="handleTouchEnd">
+    <text>{{content}}</text>
+  </view>
+
+</view>
+
+
+
+<view class="read_footer" wx:if="{{isShowFooter}}">
+    <view class='btn' bindtap="changeSource">
+      <text class='iconfont icon-edit'></text>
+      <text>换源</text>
+    </view>
+    <view class='btn' bindtap='checkTheDirectory'>
+      <text class='iconfont icon-category'></text>
+      <text>目录</text>
+    </view>
+    <view class='btn' bindtap='showSetup'>
+      <text class='iconfont icon-set'></text>
+      <text>设置</text>
+    </view>
+    <view class='btn' bindtap='toNightMode'>
+      <text class='iconfont icon-pic'></text>
+      <text>夜间模式</text>
+    </view>
+    <view class='btn' bindtap='dowmloadBook'>
+      <text class='iconfont icon-icondownload'></text>
+      <text>下载</text>
+    </view>
+</view>

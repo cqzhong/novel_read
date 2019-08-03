@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/bookshelf/bookshelf",
+    "pages/rank/rank",
+    "pages/classify/classify",
+    "pages/read/read",
+    "pages/search/search",
+    "pages/search/index",
+    "pages/authorize/authorize",
+    "component/bookList/bookList",
+    "pages/bookDetail/bookDetail",
+    "pages/classify/classifyList/classifyList",
+    "pages/rank/rankList/rankList",
+    "pages/bookDetail/authorBooks/authorBooks",
+    "pages/read/readSource/readSource",
+    "pages/read/readDirectory/readDirectory"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#FFFFFF",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#7E8389",
+    "selectedColor": "#333333",
+    "backgroundColor": "#f7f7f7",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/bookshelf/bookshelf",
+        "text": "书架",
+        "iconPath": "images/homeUnselected.png",
+        "selectedIconPath": "images/homeSelected.png"
+      },
+      {
+        "pagePath": "pages/rank/rank",
+        "text": "排行榜",
+        "iconPath": "images/rankUnselected.png",
+        "selectedIconPath": "images/rankSelected.png"
+      },
+      {
+        "pagePath": "pages/classify/classify",
+        "text": "分类",
+        "iconPath": "images/mineUnselected.png",
+        "selectedIconPath": "images/mineSelected.png"
+      },
+      {
+        "pagePath": "pages/search/index",
+        "text": "搜索",
+        "iconPath": "images/mineUnselected.png",
+        "selectedIconPath": "images/mineSelected.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,9 @@
+<template name="bookListCell">
+  <view class="base_cell_view">
+    <image class='cover_image' mode='aspectFit' src="https://statics.zhuishushenqi.com{{item.cover}}"></image>
+    <view class='right_view'>
+      <view class='title_label'>{{item.title}}</view>
+      <view class='chapter_num_label'>{{item.lastChapter}}</view>
+    </view>
+  </view>
+</template>

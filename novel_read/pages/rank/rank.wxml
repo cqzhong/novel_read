@@ -1,0 +1,60 @@
+<!--pages/rank/rank.wxml-->
+<view class="rank_bottom">
+
+<!-- 男生 -->
+  <text class='rank_classTitle'>男生</text>
+  <block wx:for="{{maleArray}}" wx:key="idx" wx:for-index="idx" wx:for-item="obj">
+    <view class="rankList_Item" bindtap="checkRankList" data-obj="{{obj}}">
+      <image class='rank_cover' mode='aspectFit' src="https://statics.zhuishushenqi.com{{obj.cover}}"></image>
+      <view class="rank_name">{{obj.title}}</view>
+    </view>
+  </block>
+<!-- 男生别人家榜单 -->
+<view class="rankList_Item" bindtap="expandedRank" data-type="male">
+  <image class='rank_cover' mode='aspectFit' src="../../images/ranking_other.png"></image>
+  <view class="rank_name">别人家的排行榜</view>
+</view>
+<block wx:if="{{isMaleExpand}}">
+  <block wx:for="{{maleMoreArray}}" wx:key="index" wx:for-item="obj">
+    <view class="rankList_Item" bindtap="checkRankList" data-obj="{{obj}}">
+      <image class='rank_cover' mode='aspectFit' src="https://statics.zhuishushenqi.com{{obj.cover}}"></image>
+      <view class="rank_name">{{obj.title}}</view>
+    </view>
+  </block>
+</block>
+
+<!-- 女生 -->
+  <text class='rank_classTitle'>女生</text>
+  <block wx:for="{{femaleArray}}" wx:key="idx" wx:for-index="idx" wx:for-item="obj">
+    <view class="rankList_Item" bindtap="checkRankList" data-obj="{{obj}}">
+      <image class='rank_cover' mode='aspectFit' src="https://statics.zhuishushenqi.com{{obj.cover}}"></image>
+      <view class="rank_name">{{obj.title}}</view>
+    </view>
+  </block>
+<!-- 女生别人家榜单 -->
+<view class="rankList_Item" bindtap="expandedRank" data-type="female">
+  <image class='rank_cover' mode='aspectFit' src="../../images/ranking_other.png"></image>
+  <view class="rank_name">别人家的排行榜</view>
+</view>
+<block wx:if="{{isFemaleExpand}}">
+  <block wx:for="{{femaleMoreArray}}" wx:key="index" wx:for-item="obj">
+    <view class="rankList_Item" bindtap="checkRankList" data-obj="{{obj}}">
+      <image class='rank_cover' mode='aspectFit' src="https://statics.zhuishushenqi.com{{obj.cover}}"></image>
+      <view class="rank_name">{{obj.title}}</view>
+    </view>
+  </block>
+</block>
+</view>
+
+
+<!-- <block wx:for="{{rankObj}}" wx:key="idx" wx:for-index="idx" wx:for-item="obj">
+    <block wx:if="{{idx ==='male' || idx ==='female'}}">
+      <text class='rank_classTitle'>{{idx === 'male' ? '男生' : '女生'}}</text>
+      <block wx:for="{{rankObj[idx]}}" wx:key="index">
+        <view class="rankList_Item">
+          <image class='rank_cover' mode='aspectFit' src="https://statics.zhuishushenqi.com{{item.cover}}"></image>
+          <view class="rank_name">{{item.title}}</view>
+        </view>
+      </block>
+    </block>
+  </block> -->

@@ -1,0 +1,23 @@
+<!--component/bookList/bookList.wxml-->
+<scroll-view scroll-y="{{true}}" class="scroll_class">
+  <block wx:for="{{list}}" wx:key="idx" wx:for-index="idx" wx:for-item="obj">
+    <view class="book_item">
+       <image class='cover_image' mode='aspectFit' src="https://statics.zhuishushenqi.com{{obj.cover}}"></image>
+       <view class="book_itemRightView" bindtap="viewBookDetail" data-id="{{obj._id}}">
+         <text class='title_label'>{{obj.title}}</text>
+         <block wx:if="{{obj.lastChapter}}">
+           <text class='book_author'>{{obj.lastChapter}}</text>
+         </block>
+         <block wx:else>
+           <text class='book_author'>{{obj.author}}</text>
+         </block>
+         
+         <text class="book_shortIntro">{{obj.shortIntro}}</text>
+       </view>
+    </view>
+  </block>
+
+  <!---更多按钮--->
+  <btn class="more_button" bindloadMore="loadMore" wx:if="{{!isLoadmore && showLoad}}"></btn>
+
+</scroll-view>

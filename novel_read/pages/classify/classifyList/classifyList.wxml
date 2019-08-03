@@ -1,0 +1,14 @@
+<!--pages/classify/classifyList/classifyList.wxml-->
+
+<!--section-->
+<view class='section'>
+  <view class='box'>
+    <bookList
+      list="{{list}}"
+      isLoadmore="{{isLoadmore}}"
+      bindloadMore="loadClassifyRequest"
+      bindviewBookDetail="viewBookDetail"
+      showLoad="{{showLoad}}"
+    ></bookList>
+  </view>
+</view>

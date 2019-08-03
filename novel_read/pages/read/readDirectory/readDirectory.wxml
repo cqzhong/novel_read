@@ -1,0 +1,23 @@
+<!--pages/read/readDirectory/readDirectory.wxml-->
+
+<view class='header'>
+   <text>共{{bookContentsObj.chapters.length}}章</text>
+   <!-- <text bindtap='reverse'>倒序</text> -->
+</view>
+<scroll-view class="weui-cells weui-cells_after-title section" scroll-y
+scroll-into-view="{{toView}}">
+
+  <block wx:for="{{bookContentsObj.chapters}}" wx:key="{{index}}" data-index="{{index}}">
+
+    <view class="weui-cell"  bindtap='selectChapter' id="select{{index}}" data-index="{{index}}">
+       <block wx:if="{{linkNum == index}}">
+         <view class="weui-cell__bd" style="color: #FD674F; ">{{item.title}}</view>
+       </block>
+       <block wx:else>
+         <view class="weui-cell__bd">{{item.title}}</view>
+       </block>
+    </view>
+
+  </block>
+
+</scroll-view>

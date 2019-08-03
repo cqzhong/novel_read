@@ -1,0 +1,35 @@
+/* pages/classify/classify.wxss */
+.title {
+  margin-left: 4%;
+  border-left: 10rpx solid #FD674F;
+  font-size: 36rpx;
+  padding: 0 20rpx;
+}
+
+.classify_item {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 20rpx 0;
+}
+.collection_item {
+  width: 44%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: 0 0 20rpx #e5e5e5;
+  padding: 20rpx 0;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  margin-left: 4%;
+}
+.collection_itemName {
+  color: #38312B;
+  font-size: 32rpx;
+}
+.collection_itemCount {
+  color: #A39D96;
+  font-size: 26rpx;
+}

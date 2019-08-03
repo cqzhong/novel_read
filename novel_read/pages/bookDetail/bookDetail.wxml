@@ -1,0 +1,55 @@
+<!--pages/bookDetail/bookDetail.wxml-->
+<!--header-->
+<view class='detail_header' bindtap="checkAuthorBooks">
+  <view class='header_left'>
+    <image class='cover_image' style="width: 140rpx; height: 190rpx;background-color: #E5E5E5;margin-left: 30rpx;" mode='aspectFit' src="https://statics.zhuishushenqi.com{{detailObj.cover}}"></image>
+  </view>
+
+  <view class="header_right">
+    <text class="header_title">{{detailObj.title}}</text>
+    <view class='author_class'>
+      <text style="color:#FD674F;">{{detailObj.author}}</text>
+      <text> | </text>
+      <text>{{detailObj.cat}}</text>
+    </view>
+    <view class="author_class">
+      <text>{{wordCount}}</text>
+    </view>
+  </view>
+
+</view>
+
+<!--introduce-->
+<view class="detail_introduce">
+  <view class="introduce_sub">
+    <text>追书人气</text>
+    <text>{{detailObj.latelyFollower}}</text>
+  </view>
+  <view class="introduce_sub">
+    <text>读者留存</text>
+    <text>{{detailObj.retentionRatio}}%</text>
+  </view>
+    <view class="introduce_sub">
+    <text>社区帖子</text>
+    <text>{{detailObj.postCount}}</text>
+  </view>
+    <view class="introduce_sub">
+    <text>日更新字</text>
+    <text>{{detailObj.serializeWordCount > 0 ? detailObj.serializeWordCount : 0}}</text>
+  </view>
+</view>
+<!--longIntro-->
+<view class="detail_longIntro">
+  <text class='longIntro_title'>简介</text>
+  <text class='longIntro_content'>{{detailObj.longIntro}}</text>
+</view>
+
+<!--footer-->
+<view class='detail_footer'>
+  <view class="button" bindtap="{{isContain ? 'removeABookcase' : 'addABookcase'}}">
+  <text>{{isContain ? "移除书架" : "加入书架"}}</text>
+  </view>
+  <view class='button' bindtap="readingImmediately">
+  <text>{{isContain ? "继续" : "立即"}}阅读</text>
+  </view>
+</view>
